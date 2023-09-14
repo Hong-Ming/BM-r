@@ -1,0 +1,32 @@
+# General options
+algorithm         direct     
+blasoption        knitro  
+convex            0
+datacheck         no         
+honorbnds         auto   
+linesearch        auto
+linsolver         auto
+presolve          no   
+scale             user_internal  
+strat_warm_start  yes
+
+# Derivatives options
+gradopt           exact 
+hessopt           exact
+
+# Termination options
+maxfevals         10000
+feastol           1.0e-06
+feastol_abs       1.0e-03
+opttol            1.0e-06
+opttol_abs        1.0e-03
+xtol              1.0e-10
+
+# Barrier options
+bar_feasible      no
+bar_murule        dampmpc
+bar_penaltycons   none
+bar_penaltyrule   flex
+
+# Parallelism options
+numthreads        1
