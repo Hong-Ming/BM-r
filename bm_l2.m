@@ -266,7 +266,6 @@ function [Sv] = S_mv(lambda, v)
     Sv = - WmatT*(lambda_h.*v(sel,:));
     Sv(img,:) = Sv(img,:) + 2*lambda_g.*v(img,:);
     Sv(sel,:) = Sv(sel,:) + lambda_h.*(2*v(sel,:) - Wmat*v);
-%     Sv = Sv - WmatT*(lambda_h.*v(sel,:));
 end
 function Sv = Syz_mv(v)
     % Matrix-vector product between S(y,z) and v
