@@ -7,7 +7,7 @@ Cost   = W{end}(class_true+1,:)' - W{end}(class_certify+1,:)';
 Image  = X(:,id);
 ni = numel(Image); nu = numel(cat(1,Bias{:}));
 Params.Offset = b{end}(class_true+1) - b{end}(class_certify+1);
-Params.Debug = true;
+Params.Debug = false;
 Params.UB = [ones(ni,1) ; inf(nu,1)];         % Upper bound on u{k}
 Params.LB = [zeros(ni,1);-inf(nu,1)];         % Lower bound on u{k}
 end
